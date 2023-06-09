@@ -1,17 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import Tarjeta from './Components/Tarjeta'
+ import Tarjeta from './Components/Tarjeta'
 import Form from './Components/Form'
 
 function App() {
 
-  const [f1, setF1] = useState({
-    nombre: '',
-    modelo: '', 
-    piloto: ''
-  })
-  const [styles, setStyles] = useState({
-    background: 'transparent',
+  
+  const [estilos, setEstilos] = useState({
+    background: 'red',
     color: 'white'
   })
 
@@ -22,8 +18,8 @@ function App() {
     <>
       <h1>Autos Clasicos</h1>
       
-      <Form f1={f1} setF1={setF1} setStyles={setStyles}/>
-      <Tarjeta f1={f1} styles={styles}/>
+      <Form setEstilos={setEstilos} estilos={estilos}/>
+      {/* <Tarjeta f={f} estilos={estilos}/> */}
 
       
     </>
